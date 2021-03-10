@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="NFR" parallel="classes" thread-count="3">
+	<!-- Do not use parallel="methods" -->
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="org.TA.TANFR.customlisteners.AnnotationTransformer"/>
+		<listener class-name="org.TA.TANFR.customlisteners.CustomeListeners"/>
+	</listeners>
+	<test name="Test">
+		<classes>
+			<class name="org.TA.TANFR.testcases.AllLinksTest" />
+			
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
